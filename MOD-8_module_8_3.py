@@ -1,5 +1,7 @@
 
 
+# Домашнее задание по теме "Создание исключений".
+
 class Car:
     def __init__(self, model, vin, numbers):
         self.model = model
