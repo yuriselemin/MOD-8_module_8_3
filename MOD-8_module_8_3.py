@@ -2,6 +2,17 @@
 
 # Домашнее задание по теме "Создание исключений".
 
+
+class IncorrectVinNumber(Exception):
+    def __init__(self, message):
+        self.message = message
+
+
+class IncorrectCarNumbers(Exception):
+    def __init__(self, message):
+        self.message = message
+
+
 class Car:
     def __init__(self, model, vin, numbers):
         self.model = model
@@ -21,14 +32,6 @@ class Car:
             raise IncorrectCarNumbers('Некорректный тип данных для номеров')
         if len(numbers) != 6:
             raise IncorrectCarNumbers('Неверная длина номера')
-
-class IncorrectVinNumber(Exception):
-    def __init__(self, message):
-        self.message = message
-
-class IncorrectCarNumbers(Exception):
-    def __init__(self, message):
-        self.message = message
 
 
 
